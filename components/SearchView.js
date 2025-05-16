@@ -12,7 +12,7 @@ export default function SearchView(props) {
             <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />
             <div className="postsContainer">
                 {postMetadata.filter(val => {
-                    return val.title.includes(searchValue)
+                    return val.title.toUpperCase().includes(searchValue.toUpperCase())
                 }).map((post, postIndex) => {
                     return (
                         <PostCard key={postIndex} post={post} />

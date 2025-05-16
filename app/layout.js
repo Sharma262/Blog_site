@@ -5,7 +5,7 @@ import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "The Bubbly Baker",
+  title: "The Nitin's Bakery",
   description: "My amazing recipe app",
 };
 
@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   let header = (
     <header>
       <Link href={'/'}>
-        <h1>The Bubbly Baker</h1>
+        <h1>The Nitin's Bakery</h1>
       </Link>
     </header>
   )

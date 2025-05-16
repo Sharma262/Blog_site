@@ -1,5 +1,4 @@
-import PostCard from "@/components/PostCard";
-import SearchBar from "@/components/SearchBar";
+
 import SearchView from "@/components/SearchView";
 import getPostMetadata from "@/utils/getPostMetadata";
 

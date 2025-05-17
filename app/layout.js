@@ -1,6 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import { ThemeProvider } from "next-themes";
+import DarkModeToggle from "@/components/DarkModeToggle";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,13 +15,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} bg-slate-50 text-slate-800 min-h-screen flex flex-col`}>
-        
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
         {/* Header */}
         <header className="bg-yellow-200 text-slate-900 py-6 shadow-sm border-b border-yellow-300">
           <div className="max-w-4xl mx-auto px-4">
             <Link href="/">
               <h1 className="text-3xl font-bold tracking-tight hover:underline">The Nitin's Bakery</h1>
             </Link>
+            <DarkModeToggle />
           </div>
         </header>
 
@@ -34,7 +37,7 @@ export default function RootLayout({ children }) {
             Made with 💛 by Nitin
           </div>
         </footer>
-
+        </ThemeProvider>
       </body>
     </html>
   );
